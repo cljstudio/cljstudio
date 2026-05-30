@@ -1,14 +1,13 @@
 <!DOCTYPE HTML>
-<html lang="fr">
+<html>
 <head>
     <title>CLJ STUDIO</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
+    <!-- STYLE BONUS DIRECT -->
     <style>
         /* === HEADER LOGO CERCLE === */
         .logo {
@@ -482,6 +481,7 @@
                 margin: 0 5px;
             }
 
+            /* MENU TRÈS COMPACT POUR PETIT ÉCRAN */
             #header nav ul {
                 display: flex;
                 flex-wrap: wrap;
@@ -595,6 +595,7 @@
                 padding: 0.3rem 0.8rem;
             }
 
+            /* FORMULAIRE */
             .field {
                 margin-bottom: 0.8rem;
             }
@@ -620,11 +621,13 @@
                 font-size: 0.8rem;
             }
 
+            /* FOOTER */
             #footer p {
                 font-size: 0.7rem;
             }
         }
 
+        /* POUR LES ÉCRANS TRÈS PETITS (MOINS DE 480px) */
         @media screen and (max-width: 480px) {
             #header nav ul {
                 gap: 0.2rem;
@@ -636,6 +639,7 @@
             }
         }
 
+        /* navigation plus clean */
         #header nav ul li a {
             letter-spacing: 2px;
             text-transform: uppercase;
@@ -647,20 +651,24 @@
 
 <div id="wrapper">
 
+    <!-- HEADER -->
     <header id="header">
 
-        <div class="logo">
+        <!-- LOGO CERCLE -->
+       <div class="logo">
            <div class="logo-circle">
                 <img src="images/logo.png" alt="CLJ STUDIO logo">
            </div>
        </div>
 
+        <!-- TITRE -->
         <div class="content">
             <div class="inner">
                 <h1>CLJ STUDIO</h1>
             </div>
         </div>
 
+        <!-- MENU -->
         <nav>
             <ul>
                 <li><a href="#NosServices">Nos Services</a></li>
@@ -672,6 +680,7 @@
 
     </header>
 
+    <!-- MAIN -->
     <div id="main">
 
         <article id="NosServices">
@@ -681,6 +690,7 @@
                 <p>Des prestations créatives pour donner vie à vos projets et développer votre présence en ligne</p>
             </div>
 
+            <!-- OFFRE GLOBALE - Mode info -->
             <div class="global-offer">
                 <div class="offer-icon">🎯</div>
                 <h3>Offre Globale Clé en Main</h3>
@@ -695,8 +705,10 @@
                 </div>
             </div>
 
+            <!-- Services principaux -->
             <div class="services-container">
                 
+                <!-- Montage Vidéo -->
                 <div class="service-card">
                     <div class="service-icon">🎬</div>
                     <h3>Montage Vidéo</h3>
@@ -709,6 +721,7 @@
                     </ul>
                 </div>
 
+                <!-- Graphisme -->
                 <div class="service-card">
                     <div class="service-icon">🎨</div>
                     <h3>Graphisme</h3>
@@ -721,6 +734,7 @@
                     </ul>
                 </div>
 
+                <!-- Community Management -->
                 <div class="service-card">
                     <div class="service-icon">📱</div>
                     <h3>Community Management</h3>
@@ -746,6 +760,7 @@
             
             <div class="portfolio-grid">
                 
+                <!-- Projet 1 - ADIGNON -->
                 <div class="portfolio-item">
                     <div class="portfolio-header">
                         <div class="client-logo">
@@ -770,6 +785,7 @@
                     </div>
                 </div>
 
+                <!-- Projet 2 - TechInnov -->
                 <div class="portfolio-item">
                     <div class="portfolio-header">
                         <div class="client-logo">🚀</div>
@@ -788,6 +804,7 @@
                     </div>
                 </div>
 
+                <!-- Projet 3 - Café Séquoia -->
                 <div class="portfolio-item">
                     <div class="portfolio-header">
                         <div class="client-logo">☕</div>
@@ -806,6 +823,7 @@
                     </div>
                 </div>
 
+                <!-- Projet 4 - FitLife Coaching -->
                 <div class="portfolio-item">
                     <div class="portfolio-header">
                         <div class="client-logo">🏋️</div>
@@ -824,6 +842,7 @@
                     </div>
                 </div>
 
+                <!-- Projet 5 - Atelier des Créateurs -->
                 <div class="portfolio-item">
                     <div class="portfolio-header">
                         <div class="client-logo">🎨</div>
@@ -842,6 +861,7 @@
                     </div>
                 </div>
 
+                <!-- Projet 6 - GreenEco -->
                 <div class="portfolio-item">
                     <div class="portfolio-header">
                         <div class="client-logo">🌱</div>
@@ -872,6 +892,7 @@
             <p>CLJ Studio est une agence spécialisée dans la création de contenu digital. Nous accompagnons les marques et les créateurs dans le développement de leur identité visuelle et leur présence en ligne.</p>
             <p>Notre approche allie créativité, technique et stratégie pour des résultats qui vous ressemblent.</p>
             
+            <!-- SECTION RÉSEAUX SOCIAUX AJOUTÉE -->
             <div class="social-links-section">
                 <h3>Retrouvez-nous sur les réseaux</h3>
                 <div class="social-buttons">
@@ -887,12 +908,14 @@
             <h2 class="major">Contact & Devis</h2>
 
             <form id="contact-form" method="POST" action="https://formsubmit.co/cljstudio3@gmail.com">
+                <!-- Configuration formsubmit.co -->
                 <input type="hidden" name="_subject" value="Nouvelle demande de contact CLJ STUDIO">
                 <input type="hidden" name="_captcha" value="false">
                 <input type="hidden" name="_template" value="table">
                 <input type="hidden" name="_replyto" value="email">
                 
                 <div class="fields">
+                    <!-- Liste déroulante pour le type de demande -->
                     <div class="field">
                         <label for="demand-type">Type de demande</label>
                         <select id="demand-type" name="Type de demande" required>
@@ -929,6 +952,7 @@
                 ✅ Message envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.
             </div>
 
+            <!-- Informations de contact supplémentaires -->
             <div style="margin-top: 2rem; text-align: center; padding: 1rem; border-top: 1px solid rgba(255,255,255,0.2);">
                 <p style="font-size: 0.8rem; opacity: 0.7;">📧 contact@cljstudio.fr</p>
                 <p style="font-size: 0.7rem; opacity: 0.5;">Réponse sous 48h ouvrées</p>
@@ -937,14 +961,17 @@
 
     </div>
 
+    <!-- FOOTER -->
     <footer id="footer">
         <p>© CLJ STUDIO</p>
     </footer>
 
 </div>
 
+<!-- BG -->
 <div id="bg"></div>
 
+<!-- SCRIPTS -->
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/browser.min.js"></script>
 <script src="assets/js/breakpoints.min.js"></script>
@@ -952,6 +979,7 @@
 <script src="assets/js/main.js"></script>
 
 <script>
+    // Gestion de l'envoi du formulaire avec confirmation
     const form = document.getElementById('contact-form');
     const successDiv = document.getElementById('form-success');
 
