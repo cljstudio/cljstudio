@@ -1,362 +1,870 @@
 <!DOCTYPE HTML>
-<!--
-	Dimension by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
-	<head>
-		<title>Dimension by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<head>
+    <title>CLJ STUDIO</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+    <!-- STYLE BONUS DIRECT -->
+    <style>
+        /* === HEADER LOGO CERCLE === */
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 25px;
+        }
 
-				<!-- Header -->
-					<header id="header">
-						<div class="logo">
-							<span class="icon fa-gem"></span>
-						</div>
-						<div class="content">
-							<div class="inner">
-								<h1>Dimension</h1>
-								<p>A fully responsive site template designed by <a href="https://html5up.net">HTML5 UP</a> and released<br />
-								for free under the <a href="https://html5up.net/license">Creative Commons</a> license.</p>
-							</div>
-						</div>
-						<nav>
-							<ul>
-								<li><a href="#intro">Intro</a></li>
-								<li><a href="#work">Work</a></li>
-								<li><a href="#about">About</a></li>
-								<li><a href="#contact">Contact</a></li>
-								<!--<li><a href="#elements">Elements</a></li>-->
-							</ul>
-						</nav>
-					</header>
+        .logo-circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(8px);
+            box-shadow: 0 0 30px rgba(255,255,255,0.15);
+            position: relative;
+        }
 
-				<!-- Main -->
-					<div id="main">
+        .logo-circle img {
+            width: 70%;
+            height: 70%;
+            object-fit: contain;
+        }
 
-						<!-- Intro -->
-							<article id="intro">
-								<h2 class="major">Intro</h2>
-								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
-								<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my <a href="#work">awesome work</a>.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
-							</article>
+        .logo-circle::after {
+            content: "";
+            position: absolute;
+            inset: -6px;
+            border-radius: 50%;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
 
-						<!-- Work -->
-							<article id="work">
-								<h2 class="major">Work</h2>
-								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
-								<p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
-								<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
-							</article>
+        /* TITRE STYLE STUDIO */
+        #header h1 {
+            margin-top: 15px;
+            font-size: 2rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
 
-						<!-- About -->
-							<article id="about">
-								<h2 class="major">About</h2>
-								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
-								<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
-							</article>
+        #header h1::before,
+        #header h1::after {
+            content: "";
+            display: inline-block;
+            width: 40px;
+            height: 2px;
+            background: white;
+            margin: 0 12px;
+            vertical-align: middle;
+        }
 
-						<!-- Contact -->
-							<article id="contact">
-								<h2 class="major">Contact</h2>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="4"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Reset" /></li>
-									</ul>
-								</form>
-								<ul class="icons">
-									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</article>
+        /* STYLE POUR LA PAGE NOS SERVICES */
+        .services-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            margin: 2rem 0;
+        }
 
-						<!-- Elements -->
-							<article id="elements">
-								<h2 class="major">Elements</h2>
+        .service-card {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            flex: 1;
+            min-width: 250px;
+            transition: transform 0.3s ease, background 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
 
-								<section>
-									<h3 class="major">Text</h3>
-									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-									<hr />
-									<h2>Heading Level 2</h2>
-									<h3>Heading Level 3</h3>
-									<h4>Heading Level 4</h4>
-									<h5>Heading Level 5</h5>
-									<h6>Heading Level 6</h6>
-									<hr />
-									<h4>Blockquote</h4>
-									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-									<h4>Preformatted</h4>
-									<pre><code>i = 0;
+        .service-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.12);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
 
-while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
-}
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
 
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-								</section>
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+        }
 
-								<section>
-									<h3 class="major">Lists</h3>
+        .service-card p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
 
-									<h4>Unordered</h4>
-									<ul>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
+        .service-features {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0 0 0;
+            text-align: center;
+        }
 
-									<h4>Alternate</h4>
-									<ul class="alt">
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
+        .service-features li {
+            font-size: 0.8rem;
+            padding: 0.3rem 0;
+            opacity: 0.8;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
 
-									<h4>Ordered</h4>
-									<ol>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis viverra.</li>
-										<li>Felis enim feugiat.</li>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis lorem.</li>
-										<li>Felis enim et feugiat.</li>
-									</ol>
-									<h4>Icons</h4>
-									<ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-									</ul>
+        .service-features li:last-child {
+            border-bottom: none;
+        }
 
-									<h4>Actions</h4>
-									<ul class="actions">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-								</section>
+        .services-intro {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1rem;
+            opacity: 0.85;
+        }
 
-								<section>
-									<h3 class="major">Table</h3>
-									<h4>Default</h4>
-									<div class="table-wrapper">
-										<table>
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
+        .cta-service {
+            text-align: center;
+            margin-top: 2rem;
+        }
 
-									<h4>Alternate</h4>
-									<div class="table-wrapper">
-										<table class="alt">
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-								</section>
+        /* Style pour l'offre globale (info box) */
+        .global-offer {
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
 
-								<section>
-									<h3 class="major">Buttons</h3>
-									<ul class="actions">
-										<li><a href="#" class="button primary">Primary</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button">Default</a></li>
-										<li><a href="#" class="button small">Small</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-										<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-									</ul>
-									<ul class="actions">
-										<li><span class="button primary disabled">Disabled</span></li>
-										<li><span class="button disabled">Disabled</span></li>
-									</ul>
-								</section>
+        .global-offer::before {
+            content: "⭐";
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 3rem;
+            opacity: 0.15;
+        }
 
-								<section>
-									<h3 class="major">Form</h3>
-									<form method="post" action="#">
-										<div class="fields">
-											<div class="field half">
-												<label for="demo-name">Name</label>
-												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
-											</div>
-											<div class="field half">
-												<label for="demo-email">Email</label>
-												<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
-											</div>
-											<div class="field">
-												<label for="demo-category">Category</label>
-												<select name="demo-category" id="demo-category">
-													<option value="">-</option>
-													<option value="1">Manufacturing</option>
-													<option value="1">Shipping</option>
-													<option value="1">Administration</option>
-													<option value="1">Human Resources</option>
-												</select>
-											</div>
-											<div class="field half">
-												<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-												<label for="demo-priority-low">Low</label>
-											</div>
-											<div class="field half">
-												<input type="radio" id="demo-priority-high" name="demo-priority">
-												<label for="demo-priority-high">High</label>
-											</div>
-											<div class="field half">
-												<input type="checkbox" id="demo-copy" name="demo-copy">
-												<label for="demo-copy">Email me a copy</label>
-											</div>
-											<div class="field half">
-												<input type="checkbox" id="demo-human" name="demo-human" checked>
-												<label for="demo-human">Not a robot</label>
-											</div>
-											<div class="field">
-												<label for="demo-message">Message</label>
-												<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" class="primary" /></li>
-											<li><input type="reset" value="Reset" /></li>
-										</ul>
-									</form>
-								</section>
+        .global-offer::after {
+            content: "⭐";
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+            font-size: 3rem;
+            opacity: 0.15;
+        }
 
-							</article>
+        .global-offer h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
 
-					</div>
+        .global-offer .offer-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
 
-				<!-- Footer -->
-					<footer id="footer">
-						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-					</footer>
+        .global-offer p {
+            font-size: 1rem;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto 1rem auto;
+        }
 
-			</div>
+        .offer-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50px;
+            padding: 0.5rem 1rem;
+            margin-top: 1rem;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
 
-		<!-- BG -->
-			<div id="bg"></div>
+        .offer-services-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+        .offer-services-list span {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            padding: 0.3rem 1rem;
+            font-size: 0.8rem;
+        }
 
-	</body>
+        /* Style pour la liste déroulante */
+        select {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid #ffffff;
+            border-radius: 4px;
+            color: #ffffff;
+            padding: 0.75rem 1rem;
+            width: 100%;
+            font-family: "Source Sans Pro", sans-serif;
+            font-size: 0.9rem;
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 1rem;
+        }
+
+        select option {
+            background-color: #1b1f22;
+            color: #ffffff;
+        }
+
+        select:focus {
+            outline: none;
+            border-color: #ffffff;
+            box-shadow: 0 0 0 1px #ffffff;
+        }
+
+        /* Style section À propos - réseaux sociaux */
+        .social-links-section {
+            margin: 2rem 0 1rem 0;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .social-links-section h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .social-links-section h3::before {
+            content: "🔗";
+            font-size: 1.2rem;
+        }
+
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.7rem 1.5rem;
+            border-radius: 40px;
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .social-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .social-btn-icon {
+            font-size: 1.1rem;
+        }
+
+        /* STYLE PORTFOLIO */
+        .portfolio-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+            margin: 2rem 0;
+        }
+
+        .portfolio-item {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 1.8rem;
+            transition: transform 0.3s ease, background 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .portfolio-item:hover {
+            transform: translateX(5px);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.25);
+        }
+
+        .portfolio-header {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .client-logo {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            overflow: hidden;
+        }
+
+        .client-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .client-info {
+            flex: 1;
+        }
+
+        .client-name {
+            font-size: 1.5rem;
+            margin-bottom: 0.3rem;
+            letter-spacing: 1px;
+        }
+
+        .prestation-badge {
+            display: inline-block;
+            padding: 0.3rem 1rem;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50px;
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+        }
+
+        .project-details {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 1.2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            flex-wrap: wrap;
+        }
+
+        .detail-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            opacity: 0.85;
+        }
+
+        .detail-icon {
+            font-size: 1.1rem;
+        }
+
+        .client-testimonial {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 1rem 1.2rem;
+            border-radius: 12px;
+            font-style: italic;
+            position: relative;
+            margin-top: 0.5rem;
+        }
+
+        .client-testimonial::before {
+            content: "“";
+            font-size: 2rem;
+            opacity: 0.3;
+            position: absolute;
+            top: 0px;
+            left: 10px;
+        }
+
+        .testimonial-text {
+            margin: 0;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            padding-left: 1rem;
+        }
+
+        .client-signature {
+            font-size: 0.8rem;
+            opacity: 0.7;
+            margin-top: 0.5rem;
+            text-align: right;
+        }
+
+        .client-links {
+            margin-top: 1rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .client-link-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 0.4rem 1rem;
+            border-radius: 30px;
+            color: white;
+            text-decoration: none;
+            font-size: 0.8rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .client-link-btn:hover {
+            background: rgba(255, 255, 255, 0.18);
+            transform: translateY(-2px);
+        }
+
+        /* Message de confirmation */
+        .form-success {
+            display: none;
+            background: rgba(76, 175, 80, 0.2);
+            border: 1px solid #4caf50;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-top: 1rem;
+            text-align: center;
+            color: #4caf50;
+        }
+
+        .form-success.show {
+            display: block;
+        }
+
+        /* Version mobile */
+        @media screen and (max-width: 736px) {
+            .logo-circle {
+                width: 75px;
+                height: 75px;
+                border-width: 2px;
+            }
+            
+            #header h1 {
+                font-size: 1.5rem;
+            }
+            
+            #header h1::before,
+            #header h1::after {
+                width: 25px;
+                margin: 0 8px;
+            }
+
+            .service-card {
+                min-width: 100%;
+            }
+
+            .global-offer {
+                padding: 1.5rem;
+            }
+
+            .global-offer h3 {
+                font-size: 1.2rem;
+            }
+
+            .social-btn {
+                padding: 0.5rem 1rem;
+                font-size: 0.8rem;
+            }
+
+            .portfolio-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .client-name {
+                font-size: 1.2rem;
+            }
+
+            .project-details {
+                justify-content: center;
+            }
+        }
+
+        /* navigation plus clean */
+        #header nav ul li a {
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+
+<div id="wrapper">
+
+    <!-- HEADER -->
+    <header id="header">
+
+        <!-- LOGO CERCLE -->
+       <div class="logo">
+           <div class="logo-circle">
+                <img src="images/logo.png" alt="CLJ STUDIO logo">
+           </div>
+       </div>
+
+        <!-- TITRE -->
+        <div class="content">
+            <div class="inner">
+                <h1>CLJ STUDIO</h1>
+            </div>
+        </div>
+
+        <!-- MENU -->
+        <nav>
+            <ul>
+                <li><a href="#NosServices">Nos Services</a></li>
+                <li><a href="#Portfolio">Portfolio</a></li>
+                <li><a href="#Apropos">A propos</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- MAIN -->
+    <div id="main">
+
+        <article id="NosServices">
+            <h2 class="major">Nos Services</h2>
+            
+            <div class="services-intro">
+                <p>Des prestations créatives pour donner vie à vos projets et développer votre présence en ligne</p>
+            </div>
+
+            <!-- OFFRE GLOBALE - Mode info -->
+            <div class="global-offer">
+                <div class="offer-icon">🎯</div>
+                <h3>Offre Globale Clé en Main</h3>
+                <p>Vous avez un projet complet ?<br>Nous pouvons fournir <strong>les trois services simultanément</strong> pour une stratégie 360° cohérente et performante.</p>
+                <div class="offer-services-list">
+                    <span>🎬 Montage Vidéo</span>
+                    <span>🎨 Graphisme</span>
+                    <span>📱 Community Management</span>
+                </div>
+                <div class="offer-badge">
+                    📦 Devis personnalisé sur demande
+                </div>
+            </div>
+
+            <!-- Services principaux -->
+            <div class="services-container">
+                
+                <!-- Montage Vidéo -->
+                <div class="service-card">
+                    <div class="service-icon">🎬</div>
+                    <h3>Montage Vidéo</h3>
+                    <p>Donnez vie à vos images avec un montage professionnel et créatif qui raconte votre histoire.</p>
+                    <ul class="service-features">
+                        <li>Montage sur mesure (capsules, interviews, événements)</li>
+                        <li>Étalonnage et colorimétrie</li>
+                        <li>Motion design et effets visuels</li>
+                        <li>Optimisation pour les réseaux sociaux</li>
+                    </ul>
+                </div>
+
+                <!-- Graphisme -->
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3>Graphisme</h3>
+                    <p>Une identité visuelle forte et cohérente pour vous démarquer et marquer les esprits.</p>
+                    <ul class="service-features">
+                        <li>Création de logo et charte graphique</li>
+                        <li>Design de supports print (flyers, cartes de visite)</li>
+                        <li>Visuels pour réseaux sociaux</li>
+                        <li>Packaging et identité de marque</li>
+                    </ul>
+                </div>
+
+                <!-- Community Management -->
+                <div class="service-card">
+                    <div class="service-icon">📱</div>
+                    <h3>Community Management</h3>
+                    <p>Développez votre communauté et engagez votre audience sur les réseaux sociaux.</p>
+                    <ul class="service-features">
+                        <li>Gestion complète de vos réseaux (Instagram, TikTok, LinkedIn)</li>
+                        <li>Création de contenu et calendrier éditorial</li>
+                        <li>Interaction avec votre communauté</li>
+                        <li>Stratégie de croissance et reporting</li>
+                        <li><strong>🔍 Audit de réseaux sociaux</strong> (diagnostic complet et recommandations)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="cta-service">
+                <a href="#contact" class="button primary">Demander un devis</a>
+            </div>
+        </article>
+
+        <article id="Portfolio">
+            <h2 class="major">Portfolio</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">Découvrez nos réalisations et les retours de nos clients.</p>
+            
+            <div class="portfolio-grid">
+                
+                <!-- Projet 1 - ADIGNON -->
+                <div class="portfolio-item">
+                    <div class="portfolio-header">
+                        <div class="client-logo">
+                            <img src="images/logadi.jpg" alt="ADIGNON logo">
+                        </div>
+                        <div class="client-info">
+                            <h3 class="client-name">ADIGNON</h3>
+                            <span class="prestation-badge">🎬 Montage Vidéo + 🎨 Graphisme + 📱 Community Management</span>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <div class="detail-item"><span class="detail-icon">⏱️</span> Durée : depuis 2020</div>
+                    </div>
+                    <div class="client-testimonial">
+                        <p class="testimonial-text">"CLJ Studio a transformé notre présence sur les réseaux sociaux. L'équipe est à l'écoute et créative. En seulement 3 mois, notre communauté a doublé !"</p>
+                        <div class="client-signature">— Morel, Manuel, Adignon GNONHOUE <br>CEO of ADIGNON</div>
+                    </div>
+                    <div class="client-links">
+                        <a href="https://linktr.ee/adi_gnon" target="_blank" rel="noopener noreferrer" class="client-link-btn">
+                            <span>🔗</span> Découvrir ADIGNON
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Projet 2 - TechInnov -->
+                <div class="portfolio-item">
+                    <div class="portfolio-header">
+                        <div class="client-logo">🚀</div>
+                        <div class="client-info">
+                            <h3 class="client-name">TechInnov</h3>
+                            <span class="prestation-badge">🎬 Montage Vidéo</span>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <div class="detail-item"><span class="detail-icon">⏱️</span> Durée : 2 semaines</div>
+                        <div class="detail-item"><span class="detail-icon">📅</span> Projet : 2024</div>
+                    </div>
+                    <div class="client-testimonial">
+                        <p class="testimonial-text">"Un montage vidéo professionnel et percutant. La vidéo de lancement de notre produit a dépassé les 100k vues ! Un vrai coup de boost pour notre visibilité."</p>
+                        <p style="font-size: 0.8rem; opacity: 0.7; margin-top: 0.5rem; text-align: right;">— Thomas Dubois, CEO</p>
+                    </div>
+                </div>
+
+                <!-- Projet 3 - Café Séquoia -->
+                <div class="portfolio-item">
+                    <div class="portfolio-header">
+                        <div class="client-logo">☕</div>
+                        <div class="client-info">
+                            <h3 class="client-name">Café Séquoia</h3>
+                            <span class="prestation-badge">🎨 Graphisme + 📱 Community Management</span>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <div class="detail-item"><span class="detail-icon">⏱️</span> Durée : 6 mois</div>
+                        <div class="detail-item"><span class="detail-icon">📅</span> Projet : 2023-2024</div>
+                    </div>
+                    <div class="client-testimonial">
+                        <p class="testimonial-text">"Refonte complète de notre identité visuelle et gestion des réseaux. Les résultats sont au-delà de nos espérances, notre clientèle a augmenté de 40%."</p>
+                        <p style="font-size: 0.8rem; opacity: 0.7; margin-top: 0.5rem; text-align: right;">— Julie Lefebvre, gérante</p>
+                    </div>
+                </div>
+
+                <!-- Projet 4 - FitLife Coaching -->
+                <div class="portfolio-item">
+                    <div class="portfolio-header">
+                        <div class="client-logo">🏋️</div>
+                        <div class="client-info">
+                            <h3 class="client-name">FitLife Coaching</h3>
+                            <span class="prestation-badge">🎬 Montage Vidéo + 📱 Community Management</span>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <div class="detail-item"><span class="detail-icon">⏱️</span> Durée : 4 mois</div>
+                        <div class="detail-item"><span class="detail-icon">📅</span> Projet : 2024</div>
+                    </div>
+                    <div class="client-testimonial">
+                        <p class="testimonial-text">"Les vidéos motivantes et la stratégie de contenu ont fait exploser notre engagement. +300% de likes et partages ! CLJ Studio est un partenaire exceptionnel."</p>
+                        <p style="font-size: 0.8rem; opacity: 0.7; margin-top: 0.5rem; text-align: right;">— Marc Leroy, coach sportif</p>
+                    </div>
+                </div>
+
+                <!-- Projet 5 - Atelier des Créateurs -->
+                <div class="portfolio-item">
+                    <div class="portfolio-header">
+                        <div class="client-logo">🎨</div>
+                        <div class="client-info">
+                            <h3 class="client-name">Atelier des Créateurs</h3>
+                            <span class="prestation-badge">🎨 Graphisme + 🎬 Montage Vidéo</span>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <div class="detail-item"><span class="detail-icon">⏱️</span> Durée : 1 mois</div>
+                        <div class="detail-item"><span class="detail-icon">📅</span> Projet : 2024</div>
+                    </div>
+                    <div class="client-testimonial">
+                        <p class="testimonial-text">"Création de notre logo, charte graphique et vidéo de présentation. Une vraie pépite créative ! Les retours de nos clients sont unanimes."</p>
+                        <p style="font-size: 0.8rem; opacity: 0.7; margin-top: 0.5rem; text-align: right;">— Emma D., directrice artistique</p>
+                    </div>
+                </div>
+
+                <!-- Projet 6 - GreenEco -->
+                <div class="portfolio-item">
+                    <div class="portfolio-header">
+                        <div class="client-logo">🌱</div>
+                        <div class="client-info">
+                            <h3 class="client-name">GreenEco</h3>
+                            <span class="prestation-badge">🎬 Montage Vidéo + 🎨 Graphisme + 📱 Community Management</span>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <div class="detail-item"><span class="detail-icon">⏱️</span> Durée : 8 mois</div>
+                        <div class="detail-item"><span class="detail-icon">📅</span> Projet : 2023-2024</div>
+                    </div>
+                    <div class="client-testimonial">
+                        <p class="testimonial-text">"Une collaboration complète exceptionnelle. CLJ Studio nous a accompagnés sur tous les aspects digitaux. Leur professionnalisme et leur créativité font la différence."</p>
+                        <p style="font-size: 0.8rem; opacity: 0.7; margin-top: 0.5rem; text-align: right;">— Antoine G., responsable marketing</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="#contact" class="button primary">Vous voulez faire partie de nos clients ?</a>
+            </div>
+        </article>
+
+        <article id="Apropos">
+            <h2 class="major">A propos</h2>
+            <p>CLJ Studio est une agence spécialisée dans la création de contenu digital. Nous accompagnons les marques et les créateurs dans le développement de leur identité visuelle et leur présence en ligne.</p>
+            <p>Notre approche allie créativité, technique et stratégie pour des résultats qui vous ressemblent.</p>
+            
+            <!-- SECTION RÉSEAUX SOCIAUX AJOUTÉE -->
+            <div class="social-links-section">
+                <h3>Retrouvez-nous sur les réseaux</h3>
+                <div class="social-buttons">
+                    <a href="https://linktr.ee/cljstudio" target="_blank" rel="noopener noreferrer" class="social-btn">
+                        <span class="social-btn-icon">🔗</span>
+                        <span>Tous nos réseaux</span>
+                    </a>
+                </div>
+            </div>
+        </article>
+
+        <article id="contact">
+            <h2 class="major">Contact & Devis</h2>
+
+            <form id="contact-form" method="POST" action="https://formsubmit.co/cljstudio3@gmail.com">
+                <!-- Configuration formsubmit.co -->
+                <input type="hidden" name="_subject" value="Nouvelle demande de contact CLJ STUDIO">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_replyto" value="email">
+                
+                <div class="fields">
+                    <!-- Liste déroulante pour le type de demande -->
+                    <div class="field">
+                        <label for="demand-type">Type de demande</label>
+                        <select id="demand-type" name="Type de demande" required>
+                            <option value="" disabled selected>-- Sélectionnez une option --</option>
+                            <option value="information">📋 Demande d'informations</option>
+                            <option value="devis-graphisme">🎨 Devis Graphisme</option>
+                            <option value="devis-cm">📱 Devis Community Management</option>
+                            <option value="devis-montage">🎬 Devis Montage Vidéo</option>
+                            <option value="devis-global">🎯 Devis Offre Globale (3 services)</option>
+                        </select>
+                    </div>
+
+                    <div class="field half">
+                        <input type="text" name="Nom complet" id="nom" placeholder="Nom complet" required />
+                    </div>
+                    <div class="field half">
+                        <input type="email" name="email" id="email" placeholder="Adresse email" required />
+                    </div>
+                    <div class="field half">
+                        <input type="text" name="Entreprise" id="entreprise" placeholder="Entreprise / Organisation" />
+                    </div>
+                    <div class="field">
+                        <textarea name="Message" id="message" placeholder="Votre message..." rows="5" required></textarea>
+                    </div>
+                </div>
+
+                <ul class="actions">
+                    <li><input type="submit" value="Envoyer la demande" class="primary" /></li>
+                    <li><input type="reset" value="Effacer" /></li>
+                </ul>
+            </form>
+
+            <div id="form-success" class="form-success">
+                ✅ Message envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.
+            </div>
+
+            <!-- Informations de contact supplémentaires -->
+            <div style="margin-top: 2rem; text-align: center; padding: 1rem; border-top: 1px solid rgba(255,255,255,0.2);">
+                <p style="font-size: 0.8rem; opacity: 0.7;">📧 contact@cljstudio.fr</p>
+                <p style="font-size: 0.7rem; opacity: 0.5;">Réponse sous 48h ouvrées</p>
+            </div>
+        </article>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer id="footer">
+        <p>© CLJ STUDIO</p>
+    </footer>
+
+</div>
+
+<!-- BG -->
+<div id="bg"></div>
+
+<!-- SCRIPTS -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+<script>
+    // Gestion de l'envoi du formulaire avec confirmation
+    const form = document.getElementById('contact-form');
+    const successDiv = document.getElementById('form-success');
+
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            setTimeout(function() {
+                successDiv.classList.add('show');
+                form.reset();
+                
+                setTimeout(function() {
+                    successDiv.classList.remove('show');
+                }, 5000);
+            }, 500);
+        });
+    }
+</script>
+
+</body>
 </html>

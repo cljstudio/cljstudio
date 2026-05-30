@@ -1116,7 +1116,7 @@ input, select, textarea {
 		top: 0;
 		left: 0;
 		width: 100%;
-		height: 100vh;
+		height: 90vh;
 		z-index: 1;
 	}
 
@@ -1140,27 +1140,33 @@ input, select, textarea {
 			-ms-transition-delay: 0.75s;
 			transition-delay: 0.75s;
 			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
-			background-size: auto, 256px 256px;
-			background-position: center, center;
-			background-repeat: no-repeat, repeat;
+			background-size: auto,
+ 256px 256px;
+			background-position: center,
+ center;
+			background-repeat: no-repeat,
+ repeat;
 			z-index: 2;
 		}
 
-		#bg:after {
-			-moz-transform: scale(1.125);
-			-webkit-transform: scale(1.125);
-			-ms-transform: scale(1.125);
-			transform: scale(1.125);
-			-moz-transition: -moz-transform 0.325s ease-in-out, -moz-filter 0.325s ease-in-out;
-			-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out;
-			-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out;
-			transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
-			background-image: url("../../images/bg.jpg");
-			background-position: center;
-			background-size: cover;
-			background-repeat: no-repeat;
-			z-index: 1;
-		}
+#bg:after {
+	-moz-transform: scale(1.125);
+	-webkit-transform: scale(1.125);
+	-ms-transform: scale(1.125);
+	transform: scale(1.125);
+
+	-moz-transition: -moz-transform 0.325s ease-in-out, -moz-filter 0.325s ease-in-out;
+	-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out;
+	-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out;
+	transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
+
+	background-image: url("../../images/bg.jpg");
+	background-position: 30% 85%;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	z-index: 1;
+}
 
 		body.is-article-visible #bg:after {
 			-moz-transform: scale(1.0825);
@@ -1288,12 +1294,17 @@ input, select, textarea {
 			}
 
 		#header .logo {
-			width: 5.5rem;
-			height: 5.5rem;
-			line-height: 5.5rem;
-			border: solid 1px #ffffff;
-			border-radius: 100%;
-		}
+	        width: auto;
+	        height: auto;
+	        line-height: normal;
+	        border: none;
+	        border-radius: 0;
+	        background: transparent;
+	        display: flex;
+	        align-items: center;
+	        justify-content: center;
+	        overflow: visible;
+}
 
 			#header .logo .icon:before {
 				font-size: 2rem;
@@ -1437,12 +1448,25 @@ input, select, textarea {
 					height: calc(2rem + 1px);
 				}
 
-			#header .logo {
-				width: 4.75rem;
-				height: 4.75rem;
-				line-height: 4.75rem;
-			}
+            #header .logo {
+	            width: 6rem;
+	            height: 6rem;
+	            border: 2px solid #ffffff;
+	            border-radius: 50%;
+	            display: flex;
+	            align-items: center;
+	            justify-content: center;
+	            overflow: hidden;
+	            background: rgba(255, 255, 255, 0.02);
+            }
 
+            #header .logo img {
+	           width: 75%;
+	           height: 75%;
+	           object-fit: contain;
+	           display: block;
+            }
+			
 				#header .logo .icon:before {
 					font-size: 1.75rem;
 				}
