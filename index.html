@@ -459,7 +459,9 @@
             display: block;
         }
 
-        /* Version mobile */
+        /* ============================================= */
+        /* VERSION MOBILE - VERSION AMÉLIORÉE */
+        /* ============================================= */
         @media screen and (max-width: 736px) {
             .logo-circle {
                 width: 75px;
@@ -475,6 +477,29 @@
             #header h1::after {
                 width: 25px;
                 margin: 0 8px;
+            }
+
+            /* AMÉLIORATION DU MENU POUR ÉVITER LES DÉCALAGES */
+            #header nav ul {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.5rem;
+                padding: 0;
+                margin: 0;
+            }
+
+            #header nav ul li {
+                display: inline-block;
+                margin: 0;
+            }
+
+            #header nav ul li a {
+                display: inline-block;
+                padding: 0.5rem 0.8rem;
+                font-size: 0.7rem;
+                letter-spacing: 1px;
+                white-space: nowrap;
             }
 
             .service-card {
@@ -505,6 +530,56 @@
 
             .project-details {
                 justify-content: center;
+            }
+
+            /* AJUSTEMENT DES BADGES DE PRESTATION */
+            .prestation-badge {
+                font-size: 0.7rem;
+                padding: 0.2rem 0.8rem;
+                display: inline-block;
+                white-space: normal;
+                word-break: break-word;
+                max-width: 100%;
+            }
+
+            /* ÉVITER LES DÉBORDEMENTS DE TEXTE */
+            .client-testimonial {
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+
+            .testimonial-text {
+                font-size: 0.8rem;
+                padding-left: 0.5rem;
+            }
+
+            .client-signature {
+                font-size: 0.7rem;
+            }
+
+            /* AJUSTEMENT DU FORMULAIRE */
+            .field {
+                margin-bottom: 0.8rem;
+            }
+
+            select, input, textarea {
+                font-size: 0.85rem !important;
+                padding: 0.6rem 0.8rem !important;
+            }
+
+            .actions {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .actions li {
+                width: 100%;
+            }
+
+            .actions input {
+                width: 100%;
+                text-align: center;
             }
         }
 
