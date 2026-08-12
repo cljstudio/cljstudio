@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CLJ Tech Studio · Accueil</title>
+  <!-- Font Awesome (icônes) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(145deg, #0b0e1a 0%, #141b2b 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    .card {
+      max-width: 1300px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 3.5rem;
+      padding: 3rem 2.5rem 4rem;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+      transition: all 0.25s ease;
+    }
+
+    /* en-tête */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem 2rem;
+      margin-bottom: 4rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      padding-bottom: 1.8rem;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+    }
+
+    .logo-icon {
+      font-size: 2.6rem;
+      color: #7b8cff;
+      filter: drop-shadow(0 0 10px rgba(90, 120, 255, 0.3));
+    }
+
+    .logo-text {
+      font-size: 2rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #e0e9ff, #a0b8ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      letter-spacing: -0.5px;
+    }
+
+    .logo-text span {
+      font-weight: 300;
+      color: #7d8fc7;
+      background: none;
+      -webkit-background-clip: unset;
+      background-clip: unset;
+    }
+
+    .tagline {
+      color: #8d9ed0;
+      font-size: 1rem;
+      background: rgba(255, 255, 255, 0.03);
+      padding: 0.5rem 1.4rem;
+      border-radius: 40px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(4px);
+      letter-spacing: 0.3px;
+    }
+
+    .tagline i {
+      margin-right: 8px;
+      color: #6d7fc7;
+    }
+
+    /* titre principal */
+    .hero {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .hero h1 {
+      font-size: 3.2rem;
+      font-weight: 600;
+      color: #f0f4ff;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 0.8rem;
+    }
+
+    .hero h1 i {
+      color: #7b8cff;
+      margin: 0 0.2rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #a8b9e6;
+      max-width: 650px;
+      margin: 0 auto;
+      font-weight: 300;
+      backdrop-filter: blur(2px);
+    }
+
+    .hero p i {
+      color: #ffb37b;
+    }
+
+    /* cartes double */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      margin: 3rem 0 2.5rem;
+    }
+
+    .card-solution {
+      background: rgba(12, 18, 34, 0.65);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-radius: 2.8rem;
+      padding: 2.6rem 2.2rem 2.8rem;
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      transition: all 0.3s cubic-bezier(0.2, 0.9, 0.3, 1.1);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card-solution::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.02), transparent 70%);
+      pointer-events: none;
+    }
+
+    .card-solution:hover {
+      transform: translateY(-8px);
+      border-color: rgba(123, 140, 255, 0.2);
+      box-shadow: 0 25px 45px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(123, 140, 255, 0.1);
+    }
+
+    .card-solution.tech:hover {
+      border-color: rgba(70, 200, 255, 0.3);
+    }
+
+    .card-solution.creative:hover {
+      border-color: rgba(255, 150, 100, 0.3);
+    }
+
+    .card-solution .icon-big {
+      font-size: 2.8rem;
+      margin-bottom: 1.2rem;
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.02);
+      padding: 0.5rem 0.8rem 0.2rem 0.8rem;
+      border-radius: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.03);
+    }
+
+    .card-solution.tech .icon-big {
+      color: #5aa9ff;
+    }
+
+    .card-solution.creative .icon-big {
+      color: #ff9f6e;
+    }
+
+    .card-solution h2 {
+      font-size: 2.1rem;
+      font-weight: 600;
+      color: #ffffff;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.7rem;
+    }
+
+    .card-solution.tech h2 i {
+      color: #5aa9ff;
+      font-size: 1.8rem;
+      margin-left: 6px;
+    }
+
+    .card-solution.creative h2 i {
+      color: #ff9f6e;
+      font-size: 1.8rem;
+      margin-left: 6px;
+    }
+
+    .card-solution .desc {
+      color: #b8c8f0;
+      line-height: 1.6;
+      font-size: 1rem;
+      margin: 0.5rem 0 1.8rem;
+      opacity: 0.9;
+      flex: 1;
+    }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem 0.8rem;
+      margin-bottom: 2.2rem;
+    }
+
+    .pill-list span {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 0.25rem 1rem;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: #c6d3f5;
+      letter-spacing: 0.2px;
+      backdrop-filter: blur(2px);
+    }
+
+    .card-solution.tech .pill-list span i {
+      color: #5aa9ff;
+      margin-right: 6px;
+    }
+
+    .card-solution.creative .pill-list span i {
+      color: #ff9f6e;
+      margin-right: 6px;
+    }
+
+    .btn-solution {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      padding: 0.9rem 2.2rem;
+      border-radius: 60px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: #eef4ff;
+      margin-top: 0.2rem;
+      backdrop-filter: blur(8px);
+      letter-spacing: 0.3px;
+    }
+
+    .btn-solution i {
+      transition: transform 0.2s ease;
+    }
+
+    .btn-solution:hover {
+      transform: scale(1.02);
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .btn-solution:hover i {
+      transform: translateX(5px);
+    }
+
+    .btn-solution.tech-btn {
+      background: rgba(40, 120, 255, 0.08);
+      border-color: rgba(70, 150, 255, 0.15);
+      color: #b6d0ff;
+    }
+
+    .btn-solution.tech-btn:hover {
+      background: rgba(40, 120, 255, 0.18);
+      border-color: #5aa9ff;
+      color: white;
+      box-shadow: 0 0 20px rgba(70, 150, 255, 0.15);
+    }
+
+    .btn-solution.creative-btn {
+      background: rgba(255, 130, 60, 0.06);
+      border-color: rgba(255, 150, 80, 0.15);
+      color: #ffceb0;
+    }
+
+    .btn-solution.creative-btn:hover {
+      background: rgba(255, 130, 60, 0.15);
+      border-color: #ff9f6e;
+      color: white;
+      box-shadow: 0 0 20px rgba(255, 130, 60, 0.15);
+    }
+
+    .btn-solution i {
+      font-size: 1.1rem;
+    }
+
+    /* mention footer */
+    .footer-note {
+      margin-top: 4.5rem;
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.03);
+      padding-top: 2.2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.2rem 3.5rem;
+      color: #6d7ea8;
+      font-size: 0.95rem;
+    }
+
+    .footer-note i {
+      margin-right: 8px;
+      color: #4d608a;
+    }
+
+    .footer-note span i {
+      color: #ff7b7b;
+    }
+
+    /* responsive */
+    @media (max-width: 900px) {
+      .card {
+        padding: 2rem 1.5rem;
+        border-radius: 2.5rem;
+      }
+      .grid-2 {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .hero h1 {
+        font-size: 2.6rem;
+      }
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .logo-text {
+        font-size: 1.8rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        padding: 1.5rem 1rem;
+      }
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .card-solution {
+        padding: 2rem 1.2rem;
+      }
+      .btn-solution {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  
+  <!-- header -->
+  <div class="header">
+    <div class="logo-area">
+      <div class="logo-icon"><i class="fas fa-cubes"></i></div>
+      <div class="logo-text">CLJ <span>Tech Studio</span></div>
+    </div>
+    <div class="tagline">
+      <i class="fas fa-compass"></i> deux pôles, une excellence
+    </div>
+  </div>
+
+  <!-- hero -->
+  <div class="hero">
+    <h1>
+      <i class="fas fa-code"></i> · <i class="fas fa-pen-fancy"></i> 
+    </h1>
+    <p>
+      <i class="fas fa-arrow-right" style="margin-right: 6px;"></i> 
+      Choisissez votre univers : <strong>IT</strong> ou <strong>Création</strong>
+    </p>
+  </div>
+
+  <!-- deux cartes -->
+  <div class="grid-2">
+
+    <!-- CARTE 1 : CLJ TECH (IT) -->
+    <div class="card-solution tech">
+      <div class="icon-big"><i class="fas fa-microchip"></i></div>
+      <h2>CLJ Tech <i class="fas fa-cog"></i></h2>
+      <div class="desc">
+        Infrastructure, développement, sécurité et conseil IT. 
+        Des solutions sur mesure pour vos systèmes et votre transformation numérique.
+      </div>
+      <div class="pill-list">
+        <span><i class="fas fa-cloud"></i> Cloud</span>
+        <span><i class="fas fa-shield-alt"></i> Sécurité</span>
+        <span><i class="fas fa-database"></i> Data</span>
+        <span><i class="fas fa-code"></i> Dev</span>
+        <span><i class="fas fa-network-wired"></i> Réseau</span>
+      </div>
+      <a href="#" class="btn-solution tech-btn">
+        <i class="fas fa-arrow-circle-right"></i> Découvrir CLJ Tech
+      </a>
+    </div>
+
+    <!-- CARTE 2 : CLJ STUDIO (Création) -->
+    <div class="card-solution creative">
+      <div class="icon-big"><i class="fas fa-palette"></i></div>
+      <h2>CLJ Studio <i class="fas fa-film"></i></h2>
+      <div class="desc">
+        Graphisme, montage vidéo, motion design et community management. 
+        Donnez vie à votre marque avec une créativité impactante.
+      </div>
+      <div class="pill-list">
+        <span><i class="fas fa-pen-fancy"></i> Graphisme</span>
+        <span><i class="fas fa-video"></i> Montage</span>
+        <span><i class="fas fa-users"></i> Community</span>
+        <span><i class="fas fa-music"></i> Motion</span>
+        <span><i class="fas fa-hashtag"></i> Social</span>
+      </div>
+      <a href="#" class="btn-solution creative-btn">
+        <i class="fas fa-arrow-circle-right"></i> Découvrir CLJ Studio
+      </a>
+    </div>
+
+  </div>
+
+  <!-- pied de page discret -->
+  <div class="footer-note">
+    <span><i class="fas fa-bolt"></i> CLJ Tech Studio · 2026</span>
+    <span><i class="fas fa-circle" style="color: #5aa9ff; font-size: 0.4rem; vertical-align: middle;"></i>   IT & Création</span>
+    <span><i class="fas fa-heart" style="color: #ff7b7b;"></i>  deux expertises, une équipe</span>
+  </div>
+
+</div>
+
+</body>
+</html>
